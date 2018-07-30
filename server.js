@@ -44,16 +44,12 @@ if(path === '/'){
   response.write(string);
   response.end();
 }else if(path === '/xxx'){
-  response.statusCode = 200;
+  response.statusCode = 404;
   response.setHeader('Content-Type','text/json;charset=utf-8');
   response.setHeader('Access-Control-Allow-Origin','http://wanglifa.com:8001')
   response.write(`
     {
-      "note":{
-        "to":"美女",
-        "from": "立发",
-        "heading":"爱的告白"
-      }
+      "error":"失败"
     }
   `)
   response.end();
