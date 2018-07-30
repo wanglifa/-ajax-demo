@@ -5,7 +5,7 @@ window.jQuery = function(nodeOrSelector){
     return nodes;
 }
 
-window.jQuery.ajax = function(options){
+window.jQuery.ajax = function({url,method,body,successFn,failFn,header}){
     
     
      
@@ -14,7 +14,7 @@ window.jQuery.ajax = function(options){
     //var {p, q} = o;
     //console.log(p); // 42
     //console.log(q); // true
-    var {url,method,body,successFn,failFn,header} = options;
+    
     //上面的options就相当于o，他等于你传入的对象{url:'/xxx',method:'post'...},
     //所以url就是options.url
     //所以上面的代码就等同于
